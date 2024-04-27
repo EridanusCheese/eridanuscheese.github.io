@@ -21,4 +21,4 @@ dreamer, writer, astronomer, feminist, artist
 > 
 > Still warm as blood.  
 > 
-> <sup><sub>“Antidotes to Fear of Death”, Rebecca Elson</sub></sup>
+> <small>“Antidotes to Fear of Death”, Rebecca Elson</small>
