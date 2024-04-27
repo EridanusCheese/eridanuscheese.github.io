@@ -5,7 +5,7 @@ order: 4
 ---
 
 ### Eridanus Cheese
-dreamer, writer, astronomer, feminist, artist
+dreamer, writer, astronomer, feminist, artist  
 <br>
 <br>
 🩵 [instagram](https://github.com/eridanus_23/)  
@@ -21,4 +21,4 @@ dreamer, writer, astronomer, feminist, artist
 > 
 > Still warm as blood.  
 > 
-> *“Antidotes to Fear of Death”, Rebecca Elson*
+> <sup><sub>“Antidotes to Fear of Death”, Rebecca Elson</sub></sup>
