@@ -7,11 +7,13 @@ order: 4
 ### Eridanus Cheese
 dreamer, writer, astronomer, feminist, artist
 
+
 🩵 [instagram](https://github.com/eridanus_23/)  
 
 🩵 [ACN](https://anilist.co/user/muuuChiyo/)  
 
 🩵 [lit.link](https://lit.link/en/eridanus/)  
+
 
 > Sometimes, instead, I stir myself  
 > 
