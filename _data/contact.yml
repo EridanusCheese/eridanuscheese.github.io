@@ -1,7 +1,11 @@
 #  The contact options.
 
-- type: github
+#- type: github
   icon: "fab fa-github"
+  url: 'https://instagram.com/eridanus_23/'
+
+- type: instagram
+  icon: "fa-brands fa-instagram"
 
 #- type: twitter
   icon: "fa-brands fa-instagram"
