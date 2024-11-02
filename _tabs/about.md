@@ -5,10 +5,10 @@ order: 4
 ---
 
 ### Eridanus Cheese
-dreamer, writer, astronomer, feminist, artist  
+dreamer, writer, me  
 <br>
 <br>
-🩵 [instagram](https://github.com/eridanus_23/)  
+🩵 [Instagram](https://instagram.com/eridanus_23/)  
 
 🩵 [ACN](https://anilist.co/user/muuuChiyo/)  
 
