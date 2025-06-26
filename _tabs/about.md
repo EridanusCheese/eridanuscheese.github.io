@@ -6,10 +6,11 @@ order: 4
 
 ### 波江芝士
 ### Eridanus Cheese
+### えり
 
-梦想家，作家，我
+夢想家 · 作家 · 私
 
-dreamer, writer, me  
+
 <br>
 <br>
 🩵 [Instagram](https://instagram.com/eridanus_23/)  
