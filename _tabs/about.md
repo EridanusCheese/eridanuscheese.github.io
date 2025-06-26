@@ -8,7 +8,7 @@ order: 4
 ### Eridanus Cheese
 ### えり
 
-夢想家 · 作家 · 私
+## **夢想家 · 作家 · 私**
 
 
 <br>
@@ -18,12 +18,18 @@ order: 4
 🩵 [ACN](https://anilist.co/user/muuuChiyo/)  
 
 🩵 [lit.link](https://lit.link/en/eridanus/)  
+
+🩵 [bilibili](https://space.bilibili.com/1023948792/)  
 <br>
 <br>
-> Sometimes, instead, I stir myself  
+> 今日ごとに　今日や限りと　惜しめども　またも今年に　逢ひにけるかな
 > 
-> Into a universe still young,  
+> <small>藤原俊成</small>
+
+> 冬の夜も　うすくれなゐの　紙のはし　散れる灯かげは　心ときめく 
 > 
-> Still warm as blood.  
+> <small>与謝野晶子</small>
+
+> 「寒いね」と　話しかければ　「寒いね」と　答える人の　いるあたたかさ
 > 
-> <small>“Antidotes to Fear of Death”, Rebecca Elson</small>
+> <small>俵万智</small>
