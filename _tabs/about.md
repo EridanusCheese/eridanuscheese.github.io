@@ -22,7 +22,7 @@ order: 4
 
 🩵 [bilibili](https://space.bilibili.com/1023948792/)
 
-🍚 [食べログ](https://tabelog.com/rvwr/030070185/)  
+🍚 [食べログ](https://tabelog.com/rvwr/030070185/)　フォロー後に、口コミを見ることができます🙇🏻‍♀️🙇🏻‍♀️🙇🏻‍♀️
 <br>
 <br>
 > 今日ごとに　今日や限りと　惜しめども　またも今年に　逢ひにけるかな
