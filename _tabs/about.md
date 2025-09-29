@@ -14,7 +14,15 @@ order: 4
 
 <br>
 <br>
-🩵 [Instagram](https://instagram.com/eridanus_23/)  
+🩵 小红书: 95697449267
+
+🩵 微信公众号: [寒夜録](https://mp.weixin.qq.com/s/5u0omGy9C0JeGgU3WV6sSw)
+
+🩵 [Instagram - 自炊・写真・グルメ記録](https://instagram.com/eri24_camera/)  
+
+🩵 [Instagram - 推し活](https://instagram.com/eridanus_23/)  
+
+🍚 [食べログ](https://tabelog.com/rvwr/030070185/)　フォロー後に、口コミを見ることができます
 
 🩵 [ACN](https://anilist.co/user/muuuChiyo/)  
 
