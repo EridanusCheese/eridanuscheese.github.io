@@ -11,28 +11,32 @@ order: 4
 #### **夢想家 · 作家 · 私**
 
 ---
-
+#### 哪里可以找到我🔍
 <br>
 <br>
-🩵 小红书: 95697449267
+🩵 [小红书](https://www.xiaohongshu.com/user/profile/6713fbec000000001d02079b)
 
-🩵 微信公众号: [寒夜録](https://mp.weixin.qq.com/s/5u0omGy9C0JeGgU3WV6sSw)
+    小红书号: 95697449267
+
+🩵 [微信公众号: 寒夜録](https://mp.weixin.qq.com/s/5u0omGy9C0JeGgU3WV6sSw)
+
+![](/assets/img/post_img/about_img/qrcode_for_gh_32f9aa4b105a_344.jpg)
+_微信公众号: 寒夜録_
 
 🩵 [Instagram - 自炊・写真・グルメ記録](https://instagram.com/eri24_camera/)  
 
 🩵 [Instagram - 推し活](https://instagram.com/eridanus_23/)  
 
-🍚 [食べログ](https://tabelog.com/rvwr/030070185/)　フォロー後に、口コミを見ることができます
+🍚 [食べログ](https://tabelog.com/rvwr/030070185/)　フォロー後に、口コミを見ることができます🙇🏻‍♀️🙇🏻‍♀️🙇🏻‍♀️
 
 🩵 [ACN](https://anilist.co/user/muuuChiyo/)  
 
 🩵 [lit.link](https://lit.link/en/eridanus/)  
 
 🩵 [bilibili](https://space.bilibili.com/1023948792/)
+<br>
+<br>
 
-🍚 [食べログ](https://tabelog.com/rvwr/030070185/)　フォロー後に、口コミを見ることができます🙇🏻‍♀️🙇🏻‍♀️🙇🏻‍♀️
-<br>
-<br>
 > 今日ごとに　今日や限りと　惜しめども　またも今年に　逢ひにけるかな
 > 
 > <small>藤原俊成</small>
