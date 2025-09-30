@@ -11,12 +11,13 @@ order: 4
 #### **夢想家 · 作家 · 私**
 
 ---
+<br>
+<br>
 #### 哪里可以找到我🔍
-<br>
-<br>
+
 🩵 [小红书](https://www.xiaohongshu.com/user/profile/6713fbec000000001d02079b)
 
-    小红书号: 95697449267
+> 小红书号: 95697449267
 
 🩵 [微信公众号: 寒夜録](https://mp.weixin.qq.com/s/5u0omGy9C0JeGgU3WV6sSw)
 
