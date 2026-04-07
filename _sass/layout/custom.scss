@@ -113,6 +113,19 @@ code, pre, kbd {
   color: var(--sidebar-btn-active-color, #fff) !important;
 }
 
+/* Force the trigger button to the absolute front layer */
+#sidebar-trigger {
+  position: relative !important;
+  z-index: 9999 !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure the background 'mask' isn't blocking clicks */
+#mask {
+  display: none !important;
+  z-index: -1 !important;
+}
+
 
 /* ------------------------------------------------------------
    LIGHT MODE
