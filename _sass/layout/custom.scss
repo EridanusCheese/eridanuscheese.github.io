@@ -1,0 +1,664 @@
+/* ============================================================
+   Custom styles — Azuki & Cream palette
+   _sass/layout/custom.scss
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   FONTS
+   - Body/headings: Noto Serif SC (elegant SC serif, Garamond-like)
+   - Sidebar + tags: Cormorant Garamond (refined, slightly condensed)
+   - Code: Space Mono
+
+   Add this to _includes/head.html before </head>:
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+   ------------------------------------------------------------ */
+
+body,
+p, li, td, th {
+  font-family: 'Noto Serif SC', 'Songti SC', Georgia, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif SC', 'Songti SC', Georgia, serif;
+}
+
+.site-title,
+.site-title a,
+.site-subtitle,
+.nav-link,
+.nav-link span,
+.sidebar-bottom a,
+.post-tag,
+.tag,
+a.tag,
+.badge {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
+}
+
+.site-title,
+.site-title a {
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.site-subtitle {
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.06em;
+}
+
+.nav-link,
+.nav-link span {
+  font-weight: 400;
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+}
+
+.post-tag,
+.tag,
+a.tag,
+.badge {
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+code, pre, kbd {
+  font-family: 'Space Mono', 'Courier New', monospace;
+}
+
+
+/* ------------------------------------------------------------
+   CURSOR
+   Place cursor.png and cursor-hover.png in assets/img/
+   ------------------------------------------------------------ */
+/* Inside assets/_sass/custom.scss */
+
+/* Fix the sidebar icons and toggle button */
+/* 1. Target the buttons and every single pixel inside them */
+#sidebar-trigger,
+#sidebar-trigger i,
+#mode-toggle,
+#mode-toggle i,
+.sidebar-bottom a,
+.sidebar-bottom i {
+  cursor: url("/assets/img/cursor.png") 0 0, auto !important;
+}
+
+/* 2. Target the "wrappers" (the invisible boxes around the buttons) */
+.btn-link, 
+.nav-link,
+#topbar-wrapper button {
+  cursor: url("/assets/img/cursor.png") 0 0, auto !important;
+}
+
+/* 3. The Sidebar Bottom area itself */
+.sidebar-bottom {
+  cursor: url("/assets/img/cursor.png") 0 0, auto !important;
+}
+
+
+/* Add this to custom.scss to force icon visibility */
+.sidebar-bottom a {
+  display: inline-block !important;
+  margin: 0 0.5rem;
+  color: var(--sidebar-btn-color, #adadad) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.sidebar-bottom a:hover i {
+  color: var(--sidebar-btn-active-color, #fff) !important;
+}
+
+
+/* ------------------------------------------------------------
+   LIGHT MODE
+   ------------------------------------------------------------ */
+[data-mode="light"],
+html:not([data-mode]) {
+  --main-bg: #FAF7F4;
+  --card-bg: #F0E8E4;
+  --text-color: #2A1A18;
+  --heading-color: #1A0E0C;
+  --link-color: #7A3850;
+  --link-hover: #5A2038;
+  --accent-primary: #A84848;
+  --tag-bg: #F0D0D0;
+  --tag-color: #7A3030;
+  --tag-border: rgba(168, 72, 72, 0.2);
+  --blockquote-border: #A84848;
+  --blockquote-bg: rgba(168, 72, 72, 0.05);
+  --code-bg: #F0E8E4;
+  --code-color: #7A3030;
+  --code-border: rgba(168, 72, 72, 0.18);
+  --hr-color: rgba(168, 72, 72, 0.18);
+  --table-border: rgba(168, 72, 72, 0.15);
+  --table-head-bg: #F0D0D0;
+  --post-date-color: #9A7A78;
+  --post-pin-color: #A84848;
+}
+
+[data-mode="light"] body,
+html:not([data-mode]) body {
+  background-color: #FAF7F4;
+  color: #2A1A18;
+}
+
+[data-mode="light"] a,
+html:not([data-mode]) a {
+  color: #7A3850;
+}
+
+[data-mode="light"] a:hover,
+html:not([data-mode]) a:hover {
+  color: #5A2038;
+}
+
+[data-mode="light"] h1,
+[data-mode="light"] h2,
+[data-mode="light"] h3,
+[data-mode="light"] h4,
+[data-mode="light"] h5,
+[data-mode="light"] h6,
+html:not([data-mode]) h1,
+html:not([data-mode]) h2,
+html:not([data-mode]) h3,
+html:not([data-mode]) h4,
+html:not([data-mode]) h5,
+html:not([data-mode]) h6 {
+  color: #1A0E0C;
+}
+
+[data-mode="light"] #main-wrapper,
+html:not([data-mode]) #main-wrapper {
+  background-color: #FAF7F4;
+}
+
+[data-mode="light"] #sidebar,
+html:not([data-mode]) #sidebar {
+  background-color: #2A1A28 !important;
+}
+
+// [data-mode="light"] .site-title a,
+// html:not([data-mode]) .site-title a {
+//   color: #d4a8c8 !important;
+// }
+
+/* Sidebar Site Title - Light Mode */
+[data-mode="light"] #sidebar .profile-wrapper .site-title a,
+html:not([data-mode]) #sidebar .profile-wrapper .site-title a,
+[data-mode="light"] #sidebar .site-title,
+html:not([data-mode]) #sidebar .site-title {
+  color: #d4a8c8 !important; /* Change this hex to your preferred red/rose */
+  text-decoration: none !important;
+}
+
+[data-mode="light"] .site-subtitle,
+html:not([data-mode]) .site-subtitle {
+  color: #b890b0 !important;
+}
+
+[data-mode="light"] #avatar img,
+html:not([data-mode]) #avatar img {
+  border-color: #d4a8c8;
+}
+
+[data-mode="light"] .nav-link,
+html:not([data-mode]) .nav-link {
+  color: #e8d0e0 !important;
+}
+
+[data-mode="light"] .nav-link:hover,
+html:not([data-mode]) .nav-link:hover {
+  color: #f0e0ec !important;
+  background-color: rgba(212, 168, 200, 0.12) !important;
+}
+
+[data-mode="light"] .nav-link.active,
+html:not([data-mode]) .nav-link.active {
+  color: #f0e0ec !important;
+  background-color: rgba(212, 168, 200, 0.15) !important;
+}
+
+[data-mode="light"] .sidebar-bottom a,
+html:not([data-mode]) .sidebar-bottom a {
+  color: #a880a0 !important;
+}
+
+[data-mode="light"] .sidebar-bottom a:hover,
+html:not([data-mode]) .sidebar-bottom a:hover {
+  color: #d4a8c8 !important;
+}
+
+[data-mode="light"] blockquote,
+html:not([data-mode]) blockquote {
+  border-left-color: #A84848 !important;
+  background-color: rgba(168, 72, 72, 0.05) !important;
+}
+
+[data-mode="light"] code:not([class*="language"]),
+html:not([data-mode]) code:not([class*="language"]) {
+  background-color: #F0D0D0;
+  color: #7A3030;
+}
+
+[data-mode="light"] div.highlight,
+[data-mode="light"] figure.highlight,
+[data-mode="light"] pre.highlight,
+html:not([data-mode]) div.highlight,
+html:not([data-mode]) figure.highlight,
+html:not([data-mode]) pre.highlight {
+  background-color: #F0E8E4 !important;
+}
+
+[data-mode="light"] .post-tag,
+[data-mode="light"] .tag,
+[data-mode="light"] a.tag,
+[data-mode="light"] .badge,
+html:not([data-mode]) .post-tag,
+html:not([data-mode]) .tag,
+html:not([data-mode]) a.tag,
+html:not([data-mode]) .badge {
+  background-color: #F0D0D0 !important;
+  color: #7A3030 !important;
+  border-color: rgba(168, 72, 72, 0.2) !important;
+}
+
+[data-mode="light"] thead tr,
+html:not([data-mode]) thead tr {
+  background-color: #F0D0D0;
+}
+
+[data-mode="light"] .post-meta,
+[data-mode="light"] span.date,
+html:not([data-mode]) .post-meta,
+html:not([data-mode]) span.date {
+  color: #9A7A78 !important;
+}
+
+
+/* ------------------------------------------------------------
+   DARK MODE
+   ------------------------------------------------------------ */
+[data-mode="dark"] body {
+  background-color: #1A0E18;
+  color: #E8D8E0;
+}
+
+[data-mode="dark"] a {
+  color: #C89098;
+}
+
+[data-mode="dark"] a:hover {
+  color: #E0B0B8;
+}
+
+[data-mode="dark"] h1,
+[data-mode="dark"] h2,
+[data-mode="dark"] h3,
+[data-mode="dark"] h4,
+[data-mode="dark"] h5,
+[data-mode="dark"] h6 {
+  color: #F0E0E4;
+}
+
+[data-mode="dark"] #main-wrapper {
+  background-color: #1A0E18;
+}
+
+[data-mode="dark"] #sidebar {
+  background-color: #120A10 !important;
+}
+
+/* Sidebar Site Title - Dark Mode */
+[data-mode="dark"] #sidebar .profile-wrapper .site-title a,
+[data-mode="dark"] #sidebar .site-title {
+  color: #E0B8D0 !important; /* Change this hex to your preferred dark-mode rose */
+  text-decoration: none !important;
+}
+
+// [data-mode="dark"] .site-title a {
+//   color: #e0b8d0 !important;
+// }
+
+[data-mode="dark"] .site-subtitle {
+  color: #b890b8 !important;
+}
+
+[data-mode="dark"] .nav-link {
+  color: #d8c0d0 !important;
+}
+
+[data-mode="dark"] .nav-link:hover,
+[data-mode="dark"] .nav-link.active {
+  color: #f0d8e8 !important;
+  background-color: rgba(200, 144, 152, 0.12) !important;
+}
+
+[data-mode="dark"] .sidebar-bottom a {
+  color: #9870a0 !important;
+}
+
+[data-mode="dark"] .sidebar-bottom a:hover {
+  color: #e0b8d0 !important;
+}
+
+[data-mode="dark"] blockquote {
+  border-left-color: #C89098 !important;
+  background-color: rgba(200, 144, 152, 0.07) !important;
+}
+
+[data-mode="dark"] code:not([class*="language"]) {
+  background-color: #2A1820;
+  color: #E0A8B0;
+}
+
+[data-mode="dark"] div.highlight,
+[data-mode="dark"] figure.highlight,
+[data-mode="dark"] pre.highlight {
+  background-color: #221428 !important;
+}
+
+[data-mode="dark"] .post-tag,
+[data-mode="dark"] .tag,
+[data-mode="dark"] a.tag,
+[data-mode="dark"] .badge {
+  background-color: #2A1820 !important;
+  color: #E0A8B0 !important;
+  border-color: rgba(200, 144, 152, 0.25) !important;
+}
+
+[data-mode="dark"] thead tr {
+  background-color: #2A1820;
+}
+
+[data-mode="dark"] .post-meta,
+[data-mode="dark"] span.date {
+  color: #9A7880 !important;
+}
+
+/* --- Dark Mode Footer Color Fix --- */
+[data-mode="dark"] {
+  /* This forces the footer background to match the site-wide background */
+  footer {
+    background-color: var(--main-wrapper-bg) !important;
+    border-top: none !important; /* Removes the "line" above the footer if it's there */
+  }
+
+  /* Target the specific wrapper classes Chirpy uses */
+  #tail-wrapper {
+    background-color: var(--main-wrapper-bg) !important;
+  }
+
+  /* Optional: If the text becomes too hard to see, adjust it here */
+  footer a, 
+  footer span {
+    color: var(--text-muted-color) !important;
+  }
+}
+
+::selection {
+  background: rgba(168, 72, 72, 0.2);
+}
+
+#sidebar .nav-item.active .nav-link,
+#sidebar .nav-link.active,
+#sidebar .nav-item.active > .nav-link {
+  background-color: rgba(212, 168, 200, 0.08) !important;
+}
+
+///////////
+
+/* 1. NEXT/PREVIOUS BUTTONS - HOVER STATES */
+
+/* --- Light Mode --- */
+[data-mode="light"] .post-navigation .btn:hover,
+html:not([data-mode]) .post-navigation .btn:hover {
+  background-color: rgba(168, 72, 72, 0.15) !important; 
+  border-color: rgba(168, 72, 72, 0.25) !important;
+  box-shadow: none !important; /* Kills the blue glow */
+}
+
+/* Ensure text remains readable in Light Mode */
+[data-mode="light"] .post-navigation .btn:hover p,
+[data-mode="light"] .post-navigation .btn:hover i,
+[data-mode="light"] .post-navigation .btn:hover span,
+html:not([data-mode]) .post-navigation .btn:hover p,
+html:not([data-mode]) .post-navigation .btn:hover i,
+html:not([data-mode]) .post-navigation .btn:hover span {
+  color: #7A3850 !important; /* Using your link-color for consistency */
+}
+
+/* --- Dark Mode --- */
+[data-mode="dark"] .post-navigation .btn:hover {
+  /* A slightly lighter, warmer plum for the 'Azuki' feel */
+  background-color: #362136 !important; 
+  border-color: rgba(200, 144, 152, 0.4) !important;
+  box-shadow: none !important;
+}
+
+/* Specifically defining text color for Dark Mode hover */
+[data-mode="dark"] .post-navigation .btn:hover p,
+[data-mode="dark"] .post-navigation .btn:hover i,
+[data-mode="dark"] .post-navigation .btn:hover span {
+  color: #F0D8E0 !important; /* A light pinkish-white for high contrast */
+}
+
+
+/* 2. ALL TAGS (Including Sidebar "Trending Tags") */
+
+/* We target .btn:hover specifically for the sidebar buttons, 
+   plus the standard tag classes for the post content.
+*/
+.post-tag:hover, 
+.tag:hover, 
+a.tag:hover, 
+#sidebar-tags .btn:hover,
+.sidebar-section .btn:hover {
+  text-decoration: none !important;
+  transition: all 0.2s ease-in-out;
+  box-shadow: none !important; /* The 'Blue Killer' */
+  border: 1px solid !important;
+}
+
+/* Light Mode Tags */
+[data-mode="light"] .post-tag:hover, 
+[data-mode="light"] .tag:hover, 
+[data-mode="light"] #sidebar-tags .btn:hover,
+html:not([data-mode]) .tag:hover,
+html:not([data-mode]) #sidebar-tags .btn:hover {
+  background-color: #F0E8E4 !important;
+  border-color: #A84848 !important; /* Azuki Red */
+  color: #7A3030 !important;
+}
+
+/* Dark Mode Tags (Slightly lighter Plum for interaction) */
+[data-mode="dark"] .post-tag:hover, 
+[data-mode="dark"] .tag:hover, 
+[data-mode="dark"] #sidebar-tags .btn:hover {
+  background-color: #3D263D !important; 
+  border-color: #C89098 !important; /* Muted Rose */
+  color: #F0D8E0 !important;
+}
+
+::selection { background: rgba(168, 72, 72, 0.2); }
+
+/* ============================================================
+   TOPBAR REFINEMENT
+   ============================================================ */
+
+/* 1. TOPBAR: TITLE & NAVIGATION TABS */
+
+.site-title-nav {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  white-space: nowrap; /* Fix: Keeps title on one single line */
+  color: var(--text-color) !important;
+  transition: opacity 0.2s ease;
+}
+
+.topbar-nav-item a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Tab Hover Effects */
+[data-mode="light"] .topbar-nav-item a:hover,
+html:not([data-mode]) .topbar-nav-item a:hover {
+  background-color: rgba(168, 72, 72, 0.08) !important; 
+  color: #A84848 !important;
+}
+
+[data-mode="dark"] .topbar-nav-item a:hover {
+  background-color: rgba(200, 144, 152, 0.15) !important; 
+  color: #F0D8E0 !important;
+}
+
+/* 2. SEARCH BOX: CHINESE FONT & BEHAVIOR */
+
+#search-input {
+  font-family: 'Noto Serif SC', serif !important;
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--tag-border) !important;
+  box-shadow: none !important;
+}
+
+#search-input::placeholder {
+  font-family: 'Noto Serif SC', serif;
+  color: var(--post-date-color);
+  opacity: 0.7;
+}
+
+#search-input:focus {
+  border-color: #A84848 !important; /* Azuki Red focus border */
+}
+
+/* Hide tabs when search is active to prevent overlap */
+html[search-active] .topbar-nav {
+  display: none !important;
+}
+
+
+/* 3. SIDEBAR: CLEANUP */
+
+/* Hide the new Photography, Travel, and Food pages from the sidebar */
+#sidebar .nav-item a[href*="/photography/"],
+#sidebar .nav-item a[href*="/travel/"],
+#sidebar .nav-item a[href*="/food/"] {
+  display: none !important;
+}
+
+/* Mode toggle icon in topbar */
+#mode-toggle {
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--text-color);
+  padding: 0.3rem;
+  border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+
+  &:hover {
+    background-color: rgba(168, 72, 72, 0.1);
+    color: #A84848;
+  }
+}
+
+[data-mode="dark"] #mode-toggle:hover {
+  background-color: rgba(200, 144, 152, 0.15);
+  color: #F0D8E0;
+}
+
+/* ============================================================
+   SIDEBAR BOTTOM — cursor fix
+   ============================================================ */
+
+/* --- KILL SIDEBAR NO-CURSOR --- */
+
+/* 1. Define the cursor for the container and all children */
+.sidebar-bottom,
+.sidebar-bottom * {
+  cursor: url("{{ '/assets/img/cursor.png' | relative_url }}"), auto !important;
+}
+
+/* 2. Target the specific interactive states (Hover and Click) */
+#mode-toggle:hover,
+#mode-toggle:active,
+#mode-toggle:focus,
+.sidebar-bottom a:hover,
+.sidebar-bottom a:active,
+.sidebar-bottom a:focus {
+  cursor: url("{{ '/assets/img/cursor.png' | relative_url }}"), auto !important;
+}
+
+/* 3. The "Ghost" Dot Fix */
+/* We set pointer-events to none so the mouse doesn't even "see" the dot, 
+   preventing it from triggering its own internal cursor rules. */
+.sidebar-bottom .icon-border {
+  pointer-events: none !important;
+  cursor: url("{{ '/assets/img/cursor.png' | relative_url }}"), auto !important;
+}
+
+/* --- 1. GLOBAL SETTINGS (Outside the brackets) --- */
+/* This ensures the button is always visible and the mask doesn't interfere */
+
+#sidebar-trigger {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 1050 !important;
+  cursor: url("{{ '/assets/img/cursor.png' | relative_url }}") 0 0, auto !important;
+  
+  i {
+    color: var(--heading-color) !important;
+  }
+}
+
+#mask {
+  display: none !important; 
+  pointer-events: none !important;
+}
+
+
+/* --- 2. DESKTOP SPECIFIC (Inside the brackets) --- */
+@media (min-width: 1200px) {
+  
+  #sidebar {
+    position: fixed;
+    left: -260px !important; /* Start hidden to the left */
+    opacity: 0;
+    visibility: hidden;
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.4s ease, 
+                visibility 0.4s !important;
+  }
+
+  /* When the script adds the attribute to <html> */
+  html[data-sidebar-visible="true"] #sidebar {
+    left: 0 !important;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Shift the main content area */
+  #main-wrapper {
+    margin-left: 0 !important;
+    transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  html[data-sidebar-visible="true"] #main-wrapper {
+    margin-left: 260px !important;
+  }
+}

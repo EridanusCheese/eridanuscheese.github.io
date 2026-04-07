@@ -36,13 +36,14 @@ social:
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Eridanus
   email: matsuokachiyo02@outlook.com # change to your email address
-  links:
+  # links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
+    # - https://twitter.com/username # change to your Twitter homepage
+    # - https://github.com/username # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
+  type: contact
 
 # Site Verification Settings
 webmaster_verifications:
@@ -224,3 +225,6 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+# For Chirpy's built-in search:
+search: true  # must be explicitly true

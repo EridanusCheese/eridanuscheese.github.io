@@ -1,0 +1,12 @@
+# _data/navigation.yml
+- title: Photography
+  url: /photography/
+  icon: fas fa-camera-retro
+
+- title: Travel
+  url: /travel/
+  icon: fas fa-map-marked-alt
+
+- title: Food
+  url: /food/
+  icon: fas fa-utensils

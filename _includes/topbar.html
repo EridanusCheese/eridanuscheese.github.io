@@ -1,0 +1,105 @@
+<header id="topbar-wrapper" class="flex-shrink-0" aria-label="Top Bar">
+  <div id="topbar" class="d-flex align-items-center justify-content-between px-lg-3 h-100">
+    
+    <div class="d-flex align-items-center">
+      <button type="button" id="sidebar-trigger" class="btn btn-link ms-1">
+        <i class="fas fa-bars fa-fw"></i>
+      </button>
+
+      <div class="ms-3 me-3">
+        <a href="{{ '/' | relative_url }}" class="site-title-nav fw-bold" style="text-decoration: none; color: inherit; white-space: nowrap;">
+          {{ site.title }}
+        </a>
+      </div>
+
+      <nav id="breadcrumb" aria-label="Breadcrumb" class="d-none d-sm-flex align-items-center">
+        {% assign paths = page.url | split: '/' %}
+        {% if paths.size == 0 or page.layout == 'home' %}
+          <span>{{ site.data.locales[include.lang].tabs.home | capitalize }}</span>
+        {% else %}
+          {% for item in paths %}
+            {% if forloop.first %}
+              <span class="me-2">
+                <a href="{{ '/' | relative_url }}">
+                  {{- site.data.locales[include.lang].tabs.home | capitalize -}}
+                </a>
+              </span>
+            {% elsif forloop.last %}
+              {% if page.collection == 'tabs' %}
+                <span>{{ site.data.locales[include.lang].tabs[item] | default: page.title }}</span>
+              {% else %}
+                <span>{{ page.title }}</span>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </nav>
+    </div>
+
+    <nav class="topbar-nav d-none d-lg-flex">
+      <ul class="d-flex list-unstyled m-0">
+        <li class="topbar-nav-item mx-3"><a href="{{ '/photography/' | relative_url }}">影</a></li>
+        <li class="topbar-nav-item mx-3"><a href="{{ '/travel/' | relative_url }}">旅</a></li>
+        <li class="topbar-nav-item mx-3"><a href="{{ '/food/' | relative_url }}">食</a></li>
+      </ul>
+    </nav>
+
+    <div class="d-flex align-items-center">
+      <button type="button" id="search-trigger" class="btn btn-link" aria-label="Search">
+        <i class="fas fa-search fa-fw"></i>
+      </button>
+      
+      <search id="search" class="align-items-center ms-3 ms-lg-0">
+        <i class="fas fa-search fa-fw"></i>
+        <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" 
+               placeholder="{{ site.data.locales[include.lang].search.hint | capitalize }}...">
+      </search>
+      
+      <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">
+        {{- site.data.locales[include.lang].search.cancel -}}
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<script>
+  (function() {
+    const trigger = document.getElementById('sidebar-trigger');
+    const html = document.documentElement;
+
+    // 1. Sync state immediately
+    const isSavedOpen = localStorage.getItem('sidebar-open') === 'true';
+    if (isSavedOpen) {
+      html.setAttribute('data-sidebar-visible', 'true');
+      document.body.setAttribute('sidebar-display', '');
+    } else {
+      html.setAttribute('data-sidebar-visible', 'false');
+      document.body.removeAttribute('sidebar-display');
+    }
+
+    function toggleSidebar(e) {
+      // STOP THE THEME FROM INTERFERING
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation(); 
+
+      const isNowOpen = html.getAttribute('data-sidebar-visible') === 'true';
+      
+      if (isNowOpen) {
+        html.setAttribute('data-sidebar-visible', 'false');
+        document.body.removeAttribute('sidebar-display');
+        localStorage.setItem('sidebar-open', 'false');
+      } else {
+        html.setAttribute('data-sidebar-visible', 'true');
+        document.body.setAttribute('sidebar-display', '');
+        localStorage.setItem('sidebar-open', 'true');
+      }
+    }
+
+    if (trigger) {
+      // We use 'click' but stop other listeners from firing
+      trigger.addEventListener('click', toggleSidebar, { capture: true });
+    }
+  })();
+</script>
