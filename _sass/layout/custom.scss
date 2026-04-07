@@ -100,30 +100,33 @@ code, pre, kbd {
 }
 
 
-/* Add this to custom.scss to force icon visibility */
-.sidebar-bottom a {
-  display: inline-block !important;
-  margin: 0 0.5rem;
-  color: var(--sidebar-btn-color, #adadad) !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
+// /* Add this to custom.scss to force icon visibility */
+// .sidebar-bottom a {
+//   display: inline-block !important;
+//   margin: 0 0.5rem;
+//   color: var(--sidebar-btn-color, #adadad) !important;
+//   opacity: 1 !important;
+//   visibility: visible !important;
+// }
 
-.sidebar-bottom a:hover i {
-  color: var(--sidebar-btn-active-color, #fff) !important;
-}
+// .sidebar-bottom a:hover i {
+//   color: var(--sidebar-btn-active-color, #fff) !important;
+// }
 
-/* Force the trigger button to the absolute front layer */
+/* Ensure the trigger is always visible and on top */
 #sidebar-trigger {
-  position: relative !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   z-index: 9999 !important;
-  pointer-events: auto !important;
+  position: relative;
+  /* Remove the individual cursor here, the global rule above handles it */
 }
 
-/* Ensure the background 'mask' isn't blocking clicks */
+/* The "Mask" is the dark overlay that appears on mobile. 
+   If it's blocking your clicks, we ensure it's below the trigger. */
 #mask {
-  display: none !important;
-  z-index: -1 !important;
+  z-index: 9998 !important;
 }
 
 
@@ -594,81 +597,27 @@ html[search-active] .topbar-nav {
   color: #F0D8E0;
 }
 
-/* ============================================================
-   SIDEBAR BOTTOM — cursor fix
-   ============================================================ */
-
-/* --- KILL SIDEBAR NO-CURSOR --- */
-
-/* 1. Define the cursor for the container and all children */
-.sidebar-bottom,
-.sidebar-bottom * {
-  cursor: url("{{ '/assets/img/cursor.png' | relative_url }}"), auto !important;
-}
-
-/* 2. Target the specific interactive states (Hover and Click) */
-#mode-toggle:hover,
-#mode-toggle:active,
-#mode-toggle:focus,
-.sidebar-bottom a:hover,
-.sidebar-bottom a:active,
-.sidebar-bottom a:focus {
-  cursor: url("{{ '/assets/img/cursor.png' | relative_url }}"), auto !important;
-}
-
-/* 3. The "Ghost" Dot Fix */
-/* We set pointer-events to none so the mouse doesn't even "see" the dot, 
-   preventing it from triggering its own internal cursor rules. */
-.sidebar-bottom .icon-border {
-  pointer-events: none !important;
-  cursor: url("{{ '/assets/img/cursor.png' | relative_url }}"), auto !important;
-}
-
-/* --- 1. GLOBAL SETTINGS --- */
-
-#sidebar-trigger {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  z-index: 1050 !important;
-
-  /* ✅ FIX: remove Liquid, use direct path */
-  cursor: url("/assets/img/cursor.png") 0 0, auto !important;
-}
-
-/* FIX: SCSS nesting is fine, but safer to flatten for Chirpy */
-#sidebar-trigger i {
-  color: var(--heading-color) !important;
-}
-
-/* ❌ REMOVE this — it breaks sidebar interaction logic */
-/*
-#mask {
-  display: none !important; 
-  pointer-events: none !important;
-}
-*/
 
 
-/* --- 2. DESKTOP ONLY --- */
 @media (min-width: 1200px) {
-
   #sidebar {
     position: fixed;
-    left: -260px !important;
+    left: -260px !important; /* Start hidden */
     opacity: 0;
     visibility: hidden;
-    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 0.4s ease,
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.4s ease, 
                 visibility 0.4s !important;
   }
 
+  /* Reveal Sidebar */
   html[data-sidebar-visible="true"] #sidebar {
     left: 0 !important;
     opacity: 1;
     visibility: visible;
   }
 
+  /* Shift Content */
   #main-wrapper {
     margin-left: 0 !important;
     transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
