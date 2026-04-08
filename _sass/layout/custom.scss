@@ -517,16 +517,19 @@ html:not([data-mode]) #sidebar-tags .btn:hover {
   transition: opacity 0.2s ease;
 }
 
-.topbar-nav-item a {
-  font-family: 'Cormorant Garamond', serif;
+/* Ensure the nav is visible even if Bootstrap tries to hide it */
+.topbar-nav {
+  display: flex !important; 
+}
+
+#topbar .topbar-nav-item a {
+  font-family: 'Cormorant Garamond', serif !important;
   font-size: 1.1rem;
   font-weight: 500;
+  color: var(--text-color) !important;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--text-color) !important;
-  text-decoration: none !important;
   padding: 0.4rem 0.8rem;
-  border-radius: 4px;
   transition: all 0.2s ease-in-out;
 }
 
