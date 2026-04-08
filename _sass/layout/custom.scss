@@ -78,26 +78,26 @@ code, pre, kbd {
 
 /* Fix the sidebar icons and toggle button */
 /* 1. Target the buttons and every single pixel inside them */
-#sidebar-trigger,
-#sidebar-trigger i,
-#mode-toggle,
-#mode-toggle i,
-.sidebar-bottom a,
-.sidebar-bottom i {
-  cursor: url("/assets/img/cursor.png") 0 0, auto !important;
-}
+// #sidebar-trigger,
+// #sidebar-trigger i,
+// #mode-toggle,
+// #mode-toggle i,
+// .sidebar-bottom a,
+// .sidebar-bottom i {
+//   cursor: url("/assets/img/cursor.png") 0 0, auto !important;
+// }
 
-/* 2. Target the "wrappers" (the invisible boxes around the buttons) */
-.btn-link, 
-.nav-link,
-#topbar-wrapper button {
-  cursor: url("/assets/img/cursor.png") 0 0, auto !important;
-}
+// /* 2. Target the "wrappers" (the invisible boxes around the buttons) */
+// .btn-link, 
+// .nav-link,
+// #topbar-wrapper button {
+//   cursor: url("/assets/img/cursor.png") 0 0, auto !important;
+// }
 
-/* 3. The Sidebar Bottom area itself */
-.sidebar-bottom {
-  cursor: url("/assets/img/cursor.png") 0 0, auto !important;
-}
+// /* 3. The Sidebar Bottom area itself */
+// .sidebar-bottom {
+//   cursor: url("/assets/img/cursor.png") 0 0, auto !important;
+// }
 
 
 // /* Add this to custom.scss to force icon visibility */

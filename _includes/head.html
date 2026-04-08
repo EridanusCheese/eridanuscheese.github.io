@@ -100,22 +100,5 @@
     <script defer src="{{ '/app.min.js' | relative_url }}?baseurl={{ site.baseurl | default: '' }}&register={{ site.pwa.cache.enabled }}"></script>
   {% endif %}
 
-  <style>
-    /* Force custom cursor globally */
-    * { cursor: url('{{ "/assets/img/cursor.png" | relative_url }}'), auto !important; }
-  </style>
-
-  <script>
-    (function() {
-      const cursorUrl = "url('{{ '/assets/img/cursor.png' | relative_url }}'), auto";
-      document.addEventListener('mousedown', () => {
-        document.documentElement.style.cursor = cursorUrl;
-      });
-      document.addEventListener('mouseup', () => {
-        document.documentElement.style.cursor = cursorUrl;
-      });
-    })();
-  </script>
-
   {% include metadata-hook.html %}
 </head>
