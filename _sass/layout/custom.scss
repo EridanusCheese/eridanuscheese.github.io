@@ -15,6 +15,8 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
    ------------------------------------------------------------ */
+---
+---
 
 body,
 p, li, td, th {
@@ -35,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 .tag,
 a.tag,
 .badge {
-  font-family: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
+  font-family: 'Noto Serif SC', 'Songti SC', Georgia, serif;
 }
 
 .site-title,
@@ -129,6 +131,17 @@ code, pre, kbd {
   z-index: 9998 !important;
 }
 
+/* Unify Site Title and Breadcrumb font */
+#sidebar #site-title a, 
+#topbar-wrapper #breadcrumb, 
+#topbar-wrapper #breadcrumb a,
+#topbar-wrapper #breadcrumb span {
+  font-family: 'Noto Serif SC', serif !important;
+  font-weight: 500 !important;
+  /* Adjust size to match the feel of your nav tabs */
+  font-size: 1.05rem; 
+}
+
 
 /* ------------------------------------------------------------
    LIGHT MODE
@@ -210,6 +223,7 @@ html:not([data-mode]) #sidebar .profile-wrapper .site-title a,
 html:not([data-mode]) #sidebar .site-title {
   color: #d4a8c8 !important; /* Change this hex to your preferred red/rose */
   text-decoration: none !important;
+  font-family: 'Noto Serif SC', serif !important;
 }
 
 [data-mode="light"] .site-subtitle,
