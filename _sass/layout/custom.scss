@@ -132,14 +132,20 @@ code, pre, kbd {
 }
 
 /* Unify Site Title and Breadcrumb font */
-#sidebar #site-title a, 
-#topbar-wrapper #breadcrumb, 
-#topbar-wrapper #breadcrumb a,
-#topbar-wrapper #breadcrumb span {
+[data-mode="light"] #breadcrumb,
+[data-mode="light"] #breadcrumb a,
+[data-mode="light"] #breadcrumb span,
+html:not([data-mode]) #breadcrumb,
+html:not([data-mode]) #breadcrumb a {
   font-family: 'Noto Serif SC', serif !important;
   font-weight: 500 !important;
-  /* Adjust size to match the feel of your nav tabs */
-  font-size: 1.05rem; 
+}
+
+[data-mode="dark"] #breadcrumb,
+[data-mode="dark"] #breadcrumb a,
+[data-mode="dark"] #breadcrumb span {
+  font-family: 'Noto Serif SC', serif !important;
+  font-weight: 500 !important;
 }
 
 
@@ -348,6 +354,7 @@ html:not([data-mode]) span.date {
 [data-mode="dark"] #sidebar .site-title {
   color: #E0B8D0 !important; /* Change this hex to your preferred dark-mode rose */
   text-decoration: none !important;
+  font-family: 'Noto Serif SC', serif !important;
 }
 
 // [data-mode="dark"] .site-title a {
