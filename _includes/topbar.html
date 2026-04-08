@@ -60,36 +60,24 @@
     const trigger = document.getElementById('sidebar-trigger');
     const html = document.documentElement;
 
-    // 1. Initial State Sync (Prevent Flicker)
-    const isSavedOpen = localStorage.getItem('sidebar-open') === 'true';
-    if (isSavedOpen) {
+    if (localStorage.getItem('sidebar-open') === 'true') {
       html.setAttribute('data-sidebar-visible', 'true');
-    } else {
-      html.setAttribute('data-sidebar-visible', 'false');
-    }
-
-    function toggleSidebar(e) {
-      // Prevent browser and theme defaults
-      e.preventDefault();
-      e.stopImmediatePropagation(); 
-
-      const isNowOpen = html.getAttribute('data-sidebar-visible') === 'true';
-      const newState = !isNowOpen;
-      
-      html.setAttribute('data-sidebar-visible', newState);
-      localStorage.setItem('sidebar-open', newState);
-      
-      // Force body attribute for theme compatibility
-      if (newState) {
-        document.body.setAttribute('sidebar-display', '');
-      } else {
-        document.body.removeAttribute('sidebar-display');
-      }
     }
 
     if (trigger) {
-      // Use both click and touchstart for better mobile response on GitHub
-      trigger.addEventListener('click', toggleSidebar, { capture: true });
+      trigger.addEventListener('click', function(e) {
+        e.preventDefault();
+        const isNowOpen = html.getAttribute('data-sidebar-visible') === 'true';
+        const newState = !isNowOpen;
+        html.setAttribute('data-sidebar-visible', newState);
+        localStorage.setItem('sidebar-open', newState);
+        
+        if (newState) {
+          document.body.setAttribute('sidebar-display', '');
+        } else {
+          document.body.removeAttribute('sidebar-display');
+        }
+      });
     }
   })();
 </script>
