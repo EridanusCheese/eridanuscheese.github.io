@@ -12,30 +12,22 @@
         </a>
       </div>
 
-    <nav id="breadcrumb" aria-label="Breadcrumb" class="d-none d-md-flex align-items-center">
-      {% assign paths = page.url | split: '/' | compact %}
-      
-      {% if paths.size == 0 or page.layout == 'home' %}
-        <span>{{ site.data.locales[include.lang].tabs.home | capitalize }}</span>
-      {% else %}
-        <span class="me-2">
-          <a href="{{ '/' | relative_url }}">
-            {{ site.data.locales[include.lang].tabs.home | capitalize }}
-          </a>
-        </span>
+      <nav id="breadcrumb" aria-label="Breadcrumb" class="d-none d-md-flex align-items-center">
+        {% assign paths = page.url | split: '/' | compact %}
         
-        <span>{{ page.title }}</span>
-      {% endif %}
-    </nav>
+        {% if paths.size == 0 or page.layout == 'home' %}
+          <span>{{ site.data.locales[include.lang].tabs.home | capitalize }}</span>
+        {% else %}
+          <span class="me-2">
+            <a href="{{ '/' | relative_url }}">
+              {{ site.data.locales[include.lang].tabs.home | capitalize }}
+            </a>
+          </span>
+          
+          <span>{{ page.title }}</span>
+        {% endif %}
+      </nav>
     </div>
-
-    <nav class="topbar-nav d-flex">
-      <ul class="d-flex list-unstyled m-0">
-        <li class="topbar-nav-item mx-3"><a href="{{ '/photography/' | relative_url }}">影</a></li>
-        <li class="topbar-nav-item mx-3"><a href="{{ '/travel/' | relative_url }}">旅</a></li>
-        <li class="topbar-nav-item mx-3"><a href="{{ '/food/' | relative_url }}">食</a></li>
-      </ul>
-    </nav>
 
     <div class="d-flex align-items-center">
       <button type="button" id="search-trigger" class="btn btn-link" aria-label="Search">

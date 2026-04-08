@@ -29,7 +29,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-title,
 .site-title a,
-.site-subtitle,
 .nav-link,
 .nav-link span,
 .sidebar-bottom a,
@@ -38,6 +37,10 @@ h1, h2, h3, h4, h5, h6 {
 a.tag,
 .badge {
   font-family: 'Noto Serif SC', 'Songti SC', Georgia, serif;
+}
+
+.site-subtitle {
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
 }
 
 .site-title,
@@ -606,11 +609,11 @@ html[search-active] .topbar-nav {
 /* 3. SIDEBAR: CLEANUP */
 
 /* Hide the new Photography, Travel, and Food pages from the sidebar */
-#sidebar .nav-item a[href*="/photography/"],
-#sidebar .nav-item a[href*="/travel/"],
-#sidebar .nav-item a[href*="/food/"] {
-  display: none !important;
-}
+// #sidebar .nav-item a[href*="/photography/"],
+// #sidebar .nav-item a[href*="/travel/"],
+// #sidebar .nav-item a[href*="/food/"] {
+//   display: none !important;
+// }
 
 /* Mode toggle icon in topbar */
 #mode-toggle {
