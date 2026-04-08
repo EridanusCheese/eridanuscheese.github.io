@@ -13,17 +13,20 @@
       </div>
 
       <nav id="breadcrumb" aria-label="Breadcrumb" class="d-none d-md-flex align-items-center">
-        {% assign paths = page.url | split: '/' %}
+        {% assign paths = page.url | split: '/' | compact %}
+        
         {% if paths.size == 0 or page.layout == 'home' %}
           <span>{{ site.data.locales[include.lang].tabs.home | capitalize }}</span>
         {% else %}
-          {% for item in paths %}
-            {% if forloop.first %}
-              <span class="me-2"><a href="{{ '/' | relative_url }}">{{ site.data.locales[include.lang].tabs.home | capitalize }}</a></span>
-            {% elsif forloop.last %}
-              <span>{{ page.title }}</span>
-            {% endif %}
-          {% endfor %}
+          <span class="me-2">
+            <a href="{{ '/' | relative_url }}">
+              {{ site.data.locales[include.lang].tabs.home | capitalize }}
+            </a>
+          </span>
+          
+          <i class="fa-solid fa-angle-right fa-xs me-2"></i>
+
+          <span>{{ page.title }}</span>
         {% endif %}
       </nav>
     </div>

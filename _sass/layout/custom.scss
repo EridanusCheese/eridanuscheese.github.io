@@ -518,18 +518,12 @@ html:not([data-mode]) #sidebar-tags .btn:hover {
 }
 
 
-/* Target the ID and the class to beat theme defaults */
-#topbar-wrapper .topbar-nav {
-  display: flex !important;
-  gap: 1.5rem; /* Ensure consistent spacing between items */
-}
-
-#topbar-wrapper .topbar-nav .topbar-nav-item a {
+body[data-theme] #topbar-wrapper .topbar-nav .topbar-nav-item a {
   font-family: 'Cormorant Garamond', serif !important;
   font-size: 1.1rem !important;
-  letter-spacing: 0.1em !important;
   padding: 0.4rem 0.8rem !important;
-  display: inline-block;
+  letter-spacing: 0.1em !important;
+  display: inline-block !important;
 }
 
 /* Tab Hover Effects */
