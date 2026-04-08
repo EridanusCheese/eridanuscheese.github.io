@@ -12,7 +12,7 @@
         </a>
       </div>
 
-      <nav id="breadcrumb" aria-label="Breadcrumb" class="d-none d-sm-none d-xl-flex align-items-center">
+      <nav id="breadcrumb" aria-label="Breadcrumb" class="d-none d-md-flex align-items-center">
         {% assign paths = page.url | split: '/' %}
         {% if paths.size == 0 or page.layout == 'home' %}
           <span>{{ site.data.locales[include.lang].tabs.home | capitalize }}</span>

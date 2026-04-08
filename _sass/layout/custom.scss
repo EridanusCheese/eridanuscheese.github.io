@@ -517,20 +517,19 @@ html:not([data-mode]) #sidebar-tags .btn:hover {
   transition: opacity 0.2s ease;
 }
 
-/* Ensure the nav is visible even if Bootstrap tries to hide it */
-.topbar-nav {
-  display: flex !important; 
+
+/* Target the ID and the class to beat theme defaults */
+#topbar-wrapper .topbar-nav {
+  display: flex !important;
+  gap: 1.5rem; /* Ensure consistent spacing between items */
 }
 
-#topbar .topbar-nav-item a {
+#topbar-wrapper .topbar-nav .topbar-nav-item a {
   font-family: 'Cormorant Garamond', serif !important;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--text-color) !important;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 0.4rem 0.8rem;
-  transition: all 0.2s ease-in-out;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.1em !important;
+  padding: 0.4rem 0.8rem !important;
+  display: inline-block;
 }
 
 /* Tab Hover Effects */
